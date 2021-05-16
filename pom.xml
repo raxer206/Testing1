@@ -12,26 +12,23 @@
     </properties>
 <!-- include below build tag to your existing pom.xml  --> 
 <build>
- <plugins>
-     <plugin> 
-
-                <!-- Building an executable jar -->
-
-                <groupId>com.mycompany</groupId>
-                <artifactId>TestingMaven</artifactId>
-                <version>3.1.0</version>
-                <configuration>
-                  <archive>
-                    <manifest>
-
-                    <!-- give full qualified name of your main class-->
-                      <mainClass>com.mycompany.testingmaven</mainClass>
-
-                    </manifest>
-                  </archive>
-                </configuration>
+  <plugins>
+    <plugin>
+      <!-- Build an executable JAR -->
+      <groupId>org.apache.maven.plugins</groupId>
+      <artifactId>maven-jar-plugin</artifactId>
+      <version>3.0.2</version>
+      <configuration>
+        <archive>
+          <manifest>
+            <addClasspath>true</addClasspath>
+            <classpathPrefix>lib/</classpathPrefix>
+            <mainClass>com.mycompany.testingmaven.MainClass</mainClass>
+          </manifest>
+        </archive>
+      </configuration>
     </plugin>
- </plugins>
+  </plugins> 
   <finalName>docker-jenkins-testing</finalName> 
 </build>
 
