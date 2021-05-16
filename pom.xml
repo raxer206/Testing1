@@ -11,7 +11,7 @@
         <maven.compiler.target>1.8</maven.compiler.target>
     </properties>
     <build>
-        <finalName>docker-jenkins-integration-testing</finalName>        
+        <finalName>docker-jenkins-testing</finalName>        
     </build>   
     
 </project>
